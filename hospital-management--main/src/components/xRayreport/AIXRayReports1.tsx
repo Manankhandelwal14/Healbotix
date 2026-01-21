@@ -289,9 +289,9 @@ const AIXRayReports1: React.FC = () => {
     drawText(`Recommendation: ${analysisResult.overallAssessment.recommendation}`, margin, yPosition)
     yPosition -= 20
     drawText(`Risk Level: ${analysisResult.overallAssessment.riskLevel}`, margin, yPosition)
-  
+
     const pdfBytes = await pdfDoc.save()
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' })
+    const blob = new Blob([pdfBytes as any], { type: 'application/pdf' })
     const link = document.createElement('a')
     link.href = URL.createObjectURL(blob)
     link.download = 'XRay_Analysis_Report.pdf'
