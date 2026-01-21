@@ -83,7 +83,6 @@ const ChartTwo: React.FC = () => {
       markers: {
         size: 16,
         strokeWidth: 10,
-        strokeColor: "transparent",
       },
     },
     fill: {
